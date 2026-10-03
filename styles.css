@@ -371,13 +371,6 @@ p {
   margin-top: 1rem;
 }
 
-.game-meta {
-  max-width: var(--measure);
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  color: var(--haze);
-}
-
 .game .btn {
   margin-top: 1.5rem;
 }
