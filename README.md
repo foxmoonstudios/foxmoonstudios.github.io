@@ -77,6 +77,11 @@ DNS has these records for the site:
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
 | CNAME | www | foxmoonstudios.github.io. |
+| TXT | _github-pages-challenge-foxmoonstudios | (GitHub's verification code) |
 
-The MX, SPF (TXT) and DKIM (`google._domainkey`) records are for the
+The TXT record proves to GitHub that the foxmoonstudios org owns the domain
+(org Settings > Pages > Verified domains), so no other account can point a
+Pages site at it. Keep it.
+
+The MX, SPF (TXT on @) and DKIM (`google._domainkey`) records are for the
 studio's email. Leave them alone.
