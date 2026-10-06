@@ -40,6 +40,16 @@ Cattitudes uses itch.io's small 315x250 cover, because the full one is over
 2 MB. A 630x500 export saved as `assets/games/cattitudes.webp` would look
 sharper.
 
+## Change the social links
+
+The socials show twice in `index.html`: as the row of icons in Follow along
+(`<ul class="socials">`) and as the small icons in the footer
+(`<ul class="footer-socials">`). Add, remove or reorder a platform in both,
+and in the `sameAs` list in the page's `<head>`, which tells search engines
+these profiles are the studio's. Each icon is a `<symbol>` at the top of the
+`<body>`, used by its `id` (`#i-bluesky`). Steam and itch.io aren't socials:
+they're the "All our games on" buttons under the games.
+
 ## Assets
 
 Everything in `assets/` comes from the Dead Position art package
