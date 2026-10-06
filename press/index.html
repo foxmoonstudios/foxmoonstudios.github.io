@@ -53,6 +53,7 @@
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="/#games">Games</a></li>
+          <li><a href="/#follow">Follow</a></li>
           <li><a href="/press/" aria-current="page">Press</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
@@ -86,7 +87,7 @@
           <dt>Games</dt>
           <dd><a href="/press/dead-position/">Dead Position</a><br><a href="/press/lanky-looters/">Lanky Looters</a><br><a href="/press/salt/">SALT: Super Awesome Laser Tag</a></dd>
           <dt>Stores</dt>
-          <dd><a href="https://store.steampowered.com/search/?developer=Foxmoon%20Studios" target="_blank" rel="noopener">Steam</a><br><a href="https://foxmoonstudios.itch.io/" target="_blank" rel="noopener">itch.io</a></dd>
+          <dd><a href="https://store.steampowered.com/search/?developer=Foxmoon%20Studios" target="_blank" rel="noopener">Steam</a><br><a href="https://foxmoonstudios.itch.io/" target="_blank" rel="noopener">itch.io</a><br><a href="https://www.patreon.com/c/FoxmoonStudios" target="_blank" rel="noopener">Patreon</a></dd>
           <dt>Social</dt>
           <dd><a href="https://x.com/FoxmoonStudios" target="_blank" rel="noopener">X</a> &middot; <a href="https://bsky.app/profile/foxmoonstudios.bsky.social" target="_blank" rel="noopener">Bluesky</a> &middot; <a href="https://www.youtube.com/channel/UCCgfZXBBQK3L-CTnOBrZfzQ" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.tiktok.com/@foxmoonstudiosofficial" target="_blank" rel="noopener">TikTok</a> &middot; <a href="https://www.instagram.com/foxmoonstudiosofficial/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://discord.gg/VsGeaquYN5" target="_blank" rel="noopener">Discord</a></dd>
           <dt>Press contact</dt>
@@ -206,6 +207,15 @@
 
   <script>
     document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    // The header stays at the top; once the page scrolls under it, it gets
+    // a backdrop (.is-scrolled in styles.css) so the links stay readable.
+    (function () {
+      var header = document.querySelector(".site-header");
+      function update() { header.classList.toggle("is-scrolled", window.scrollY > 8); }
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    })();
   </script>
 </body>
 </html>

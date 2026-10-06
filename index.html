@@ -274,6 +274,15 @@
   <script>
     document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
+    // The header stays at the top; once the page scrolls under it, it gets
+    // a backdrop (.is-scrolled in styles.css) so the links stay readable.
+    (function () {
+      var header = document.querySelector(".site-header");
+      function update() { header.classList.toggle("is-scrolled", window.scrollY > 8); }
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    })();
+
     // The fox wakes up (well, twitches) where the browser can play its
     // see-through video: Chrome, Edge and Firefox. Safari and iOS can't show
     // the video's transparency, so they keep the still, as does anyone who

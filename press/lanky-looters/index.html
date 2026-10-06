@@ -53,6 +53,7 @@
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="/#games">Games</a></li>
+          <li><a href="/#follow">Follow</a></li>
           <li><a href="/press/">Press</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
@@ -313,6 +314,15 @@
 
   <script>
     document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    // The header stays at the top; once the page scrolls under it, it gets
+    // a backdrop (.is-scrolled in styles.css) so the links stay readable.
+    (function () {
+      var header = document.querySelector(".site-header");
+      function update() { header.classList.toggle("is-scrolled", window.scrollY > 8); }
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    })();
   </script>
 </body>
 </html>

@@ -53,6 +53,7 @@
       <nav class="site-nav" aria-label="Main">
         <ul>
           <li><a href="/#games">Games</a></li>
+          <li><a href="/#follow">Follow</a></li>
           <li><a href="/press/">Press</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
@@ -119,9 +120,9 @@
           <h3>Gambits and the shop</h3>
           <p>Between rounds, the shopkeepers sell Gambits: passive cards that bend the scoring and, for a few of them, the rules of chess. Let your king castle from anywhere on the board, let your bishops jump a piece, double the mult on every knight move. Study packs level up the tactics you lean on, and editions (Foil, Holographic, Polychrome and Negative) sweeten any card.</p>
           <h3>The Host cheats</h3>
-          <p>Your opponent is the Host, and he does not play fair. From the second ante he bends the board with Blaze and Frost, and every ante ends with one of his lieutenants: the Warden forbids you to give check, the Beach Bum sends tidal waves across the board, the Pyromancer burns the piece you lean on, and the Puppeteer never moves his own pieces. He moves yours.</p>
+          <p>Your opponent is the Host, and he does not play fair. From the second match he bends the board with Blaze and Frost, and every match ends with one of his lieutenants: the Warden forbids you to give check, the Beach Bum sends tidal waves across the board, the Pyromancer burns the piece you lean on, and the Puppeteer never moves his own pieces. He moves yours.</p>
           <h3>A run</h3>
-          <p>Four antes of four rounds, the targets climbing and the Host&rsquo;s army growing. Skip a round for a tag, beat the fourth ante&rsquo;s boss to win, then climb the stakes: White, Red, Gold and Black.</p>
+          <p>Four matches of four rounds, the targets climbing and the Host&rsquo;s army growing. Skip a round for a tag, beat the fourth match&rsquo;s boss to win, then climb the stakes: White, Red, Gold and Black.</p>
         </section>
 
         <section class="press-block" aria-labelledby="features-title">
@@ -192,7 +193,7 @@
             </li>
             <li>
               <a href="/press/img/dead-position/dead-position-08.jpg" download>
-                <img src="/press/img/dead-position/dead-position-08-thumb.webp" width="640" height="360" loading="lazy" alt="ante overview">
+                <img src="/press/img/dead-position/dead-position-08-thumb.webp" width="640" height="360" loading="lazy" alt="run overview">
               </a>
               <p><span class="media-meta">1920&times;1080 JPG</span> <a href="/press/img/dead-position/dead-position-08.jpg" download>Download</a></p>
             </li>
@@ -308,6 +309,15 @@
 
   <script>
     document.querySelector("[data-year]").textContent = new Date().getFullYear();
+
+    // The header stays at the top; once the page scrolls under it, it gets
+    // a backdrop (.is-scrolled in styles.css) so the links stay readable.
+    (function () {
+      var header = document.querySelector(".site-header");
+      function update() { header.classList.toggle("is-scrolled", window.scrollY > 8); }
+      update();
+      window.addEventListener("scroll", update, { passive: true });
+    })();
   </script>
 </body>
 </html>

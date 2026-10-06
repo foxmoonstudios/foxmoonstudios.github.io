@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* jump links land below the fixed header */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -93,7 +94,7 @@ p {
   position: absolute;
   left: var(--gutter);
   top: -4rem;
-  z-index: 10;
+  z-index: 30;
   padding: 0.5rem 1rem;
   background: var(--fox);
   color: var(--ink);
@@ -111,13 +112,24 @@ p {
   margin-inline: auto;
 }
 
-/* Header */
+/* Header: stays at the top of the screen. It's clear over the hero, and
+   once the page scrolls under it (the script adds .is-scrolled) it slims
+   down and gets a backdrop so the links stay readable. */
 
 .site-header {
-  position: absolute;
+  position: fixed;
   inset: 0 0 auto;
-  z-index: 5;
+  z-index: 20;
   padding-block: 1.25rem;
+  transition: padding-block 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.site-header.is-scrolled {
+  padding-block: 0.625rem;
+  background: rgb(12 9 16 / 0.86);
+  box-shadow: 0 1px 0 var(--line);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .site-header .wrap {
@@ -859,9 +871,13 @@ p {
     font-size: 11pt;
   }
 
-  .site-header {
+  .site-header,
+  .site-header.is-scrolled {
     position: static;
     padding-block: 0 1rem;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
   }
 
   .site-nav,
@@ -998,6 +1014,7 @@ p {
     scroll-behavior: auto;
   }
 
+  .site-header,
   .game-art img,
   .btn,
   .social-icon,
