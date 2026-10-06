@@ -10,6 +10,7 @@ files, commit, push, and Pages publishes the change in a minute or two.
 | `styles.css` | All the styling. The colours and fonts are at the top. |
 | `404.html` | The page GitHub Pages shows for a link that doesn't exist. |
 | `CNAME` | The custom domain. Pages reads it; don't delete it. |
+| `press/` | The press kit pages (below). |
 | `assets/` | Images, the fox's animation and the fonts (below). |
 | `.nojekyll` | Tells Pages to serve the files as they are. |
 
@@ -39,6 +40,29 @@ put the file in `assets/games/` and point the `src` at it.
 Cattitudes uses itch.io's small 315x250 cover, because the full one is over
 2 MB. A 630x500 export saved as `assets/games/cattitudes.webp` would look
 sharper.
+
+## The press kits
+
+`press/index.html` is the press hub at
+[foxmoonstudios.com/press](https://foxmoonstudios.com/press/): the studio fact
+sheet, the games, the studio logos and how to get keys. Each game has its own
+kit at `press/<game>/index.html` (`dead-position`, `lanky-looters`, `salt`):
+a fact sheet, the description and features, the trailer, the screenshots and
+the logos and key art. The pages use the same `styles.css` (the "Press kit
+pages" section), and printing one gives a plain fact sheet.
+
+The images live in `press/img/<game>/`: every image is there at full size
+(screenshots and art as JPG, anything with transparency as PNG) with a
+`-thumb.webp` beside it for the grid. They were made from the art in
+`E:\MyCreations\PressKits`, which is also what's in the public Google Drive
+folders the "Download the whole kit" buttons open (the Foxmoon Studios Drive,
+`Press Kits/`). The Drive kits add what's too big for the repo: the full-size
+key art, GIFs and MP4 clips, and a PDF of each fact sheet.
+
+When a game changes (a new update, new screenshots, a new trailer), change
+its page by hand like the rest of the site, and drop the new files into its
+Drive folder too. Partnier/Keymailer links each game's press kit to its page
+here, so keep the addresses as they are.
 
 ## Change the social links
 

@@ -619,6 +619,327 @@ p {
   margin-top: 1.75rem;
 }
 
+/* Press kit pages (press/) */
+
+.site-nav a[aria-current="page"] {
+  color: var(--fox-light);
+}
+
+.press-hero {
+  padding: 8.5rem 0 clamp(3rem, 7vw, 4.5rem);
+  background:
+    linear-gradient(to bottom, rgb(17 14 34 / 0.55), rgb(17 14 34 / 0.8) 60%, var(--night)),
+    var(--press-art) center 30% / cover no-repeat,
+    var(--deep);
+}
+
+.press-hero--studio {
+  background:
+    linear-gradient(to bottom, rgb(17 14 34 / 0.2), var(--night)),
+    url("assets/galaxy-1280.webp") 70% 0 / cover no-repeat,
+    var(--deep);
+}
+
+.press-hero h1 {
+  font-size: clamp(2.75rem, 7vw, 5rem);
+}
+
+.press-hero .tagline {
+  max-width: 38rem;
+}
+
+.press-hero .actions,
+.actions--left {
+  justify-content: flex-start;
+}
+
+.press-kicker {
+  margin-bottom: 0.75rem;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--fox-light);
+}
+
+.press-kicker a {
+  text-decoration: none;
+}
+
+.press-kicker a::before {
+  content: "\2190\00a0";
+}
+
+.press-layout {
+  display: grid;
+  grid-template-columns: 17.5rem minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(4rem, 9vw, 6rem);
+}
+
+.factsheet {
+  position: sticky;
+  top: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgb(243 239 196 / 0.03);
+}
+
+.factsheet h2 {
+  font-size: 1.875rem;
+}
+
+.factsheet dl {
+  margin: 1.25rem 0 0;
+}
+
+.factsheet dt {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--haze);
+}
+
+.factsheet dd {
+  margin: 0.125rem 0 1rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.factsheet dd:last-child {
+  margin-bottom: 0;
+}
+
+.factsheet a,
+.press-main a:not(.btn):not(.game-art) {
+  color: var(--fox-light);
+}
+
+.press-block + .press-block {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.press-block h2 {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+}
+
+.press-block h3 {
+  margin-top: 1.75rem;
+  font-size: 1.625rem;
+}
+
+.press-block > p,
+.press-block > h3 + p {
+  max-width: 42rem;
+  margin-top: 1rem;
+}
+
+.press-block h3 + p {
+  margin-top: 0.5rem;
+}
+
+.feature-list {
+  max-width: 42rem;
+  margin: 1.25rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.feature-list li + li {
+  margin-top: 0.5rem;
+}
+
+.feature-list li::marker {
+  color: var(--fox);
+}
+
+.press-note {
+  font-size: 1rem;
+  color: var(--haze);
+}
+
+.press-email {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.video {
+  margin-top: 1.25rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.5rem 1.25rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.media-grid li > a {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--deep);
+}
+
+.media-grid img {
+  width: 100%;
+  height: auto;
+}
+
+/* Logos and art sit on a checkerboard so their transparency shows. */
+.media-grid--art li > a {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  padding: 0.75rem;
+  background:
+    repeating-conic-gradient(rgb(243 239 196 / 0.06) 0 25%, transparent 0 50%) 0 0 / 1rem 1rem,
+    #1a1530;
+}
+
+.media-grid--art img {
+  width: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.media-grid p {
+  margin-top: 0.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--haze);
+}
+
+.media-meta {
+  margin-right: 0.5rem;
+}
+
+.press-games {
+  margin-top: 0.5rem;
+}
+
+.press-games .game {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  padding-block: 2rem;
+}
+
+.press-games h3 {
+  font-size: clamp(1.75rem, 3.2vw, 2.25rem);
+}
+
+@media (max-width: 900px) {
+  .press-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .factsheet {
+    position: static;
+  }
+}
+
+/* Printing a press page gives a plain fact sheet: no media, no buttons. */
+@media print {
+  body {
+    background: #fff;
+    color: #111;
+    font-size: 11pt;
+  }
+
+  .site-header {
+    position: static;
+    padding-block: 0 1rem;
+  }
+
+  .site-nav,
+  .skip,
+  .press-kicker,
+  .actions,
+  .press-block--media,
+  .video,
+  .footer-socials {
+    display: none !important;
+  }
+
+  .press-hero,
+  .press-hero--studio {
+    padding: 0 0 1.5rem;
+    background: none;
+  }
+
+  .press-hero h1 {
+    font-size: 30pt;
+  }
+
+  .tagline,
+  .press-note,
+  .factsheet dt,
+  .site-footer {
+    color: #444;
+  }
+
+  .press-layout {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    padding-block: 0;
+  }
+
+  .factsheet {
+    position: static;
+    border-color: #ccc;
+    background: none;
+  }
+
+  .factsheet a,
+  .press-main a:not(.btn):not(.game-art) {
+    color: #111;
+  }
+
+  .press-block + .press-block {
+    margin-top: 1.75rem;
+  }
+
+  .press-block h2 {
+    font-size: 20pt;
+  }
+
+  .press-block h3 {
+    margin-top: 1rem;
+    font-size: 14pt;
+  }
+
+  .press-games .game-art {
+    display: none;
+  }
+
+  .press-games .game {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 0.75rem;
+    border-color: #ccc;
+  }
+
+  .site-footer {
+    margin-top: 2rem;
+    border-color: #ccc;
+  }
+
+  .site-footer .brand {
+    color: #111;
+  }
+}
+
 /* Small screens */
 
 @media (max-width: 760px) {
