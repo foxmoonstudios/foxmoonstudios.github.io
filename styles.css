@@ -438,9 +438,11 @@ p {
   line-height: 1;
 }
 
-/* Join the community */
+/* Join the community. It and Contact take the darker background, so the
+   sections alternate down the page: games, community, press, contact. */
 
-.follow {
+.follow,
+.contact {
   background:
     radial-gradient(60rem 30rem at 85% 0%, rgb(144 72 160 / 0.22), transparent 70%),
     var(--deep);
@@ -520,10 +522,6 @@ p {
 }
 
 /* Contact */
-
-.press + .contact {
-  border-top: 1px solid var(--line);
-}
 
 .contact .wrap {
   display: grid;
