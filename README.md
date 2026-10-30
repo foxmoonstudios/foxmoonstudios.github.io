@@ -4,6 +4,12 @@ The Foxmoon Studios website: one static page, served by GitHub Pages at
 [foxmoonstudios.com](https://foxmoonstudios.com). No build step. Edit the
 files, commit, push, and Pages publishes the change in a minute or two.
 
+Pages tells browsers to keep each file for 10 minutes, so a reload can show
+new HTML with the old `styles.css`. Every page links the stylesheet as
+`styles.css?v=<date>`: after changing `styles.css`, change that `v` on all of
+them (`index.html`, `404.html` and the four `press/` pages) so browsers fetch
+the new one.
+
 | File | What |
 |---|---|
 | `index.html` | The page: the hero, the games, the links, the press kits, the contact email. |
