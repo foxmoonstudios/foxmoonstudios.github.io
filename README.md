@@ -66,8 +66,8 @@ here, so keep the addresses as they are.
 
 ## Change the social links
 
-The socials show twice in `index.html`: as the row of icons in Follow along
-(`<ul class="socials">`) and as the small icons in the footer
+The socials show twice in `index.html`: as the row of icons in Join the
+community (`<ul class="socials">`) and as the small icons in the footer
 (`<ul class="footer-socials">`). Add, remove or reorder a platform in both,
 and in the `sameAs` list in the page's `<head>`, which tells search engines
 these profiles are the studio's. Each icon is a `<symbol>` at the top of the
