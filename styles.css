@@ -509,7 +509,21 @@ p {
   color: var(--moon);
 }
 
+/* Press kits: a pointer to the press pages, so the nav's Press link stays
+   on this page like the others */
+
+.press-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
 /* Contact */
+
+.press + .contact {
+  border-top: 1px solid var(--line);
+}
 
 .contact .wrap {
   display: grid;

@@ -6,7 +6,7 @@ files, commit, push, and Pages publishes the change in a minute or two.
 
 | File | What |
 |---|---|
-| `index.html` | The page: the hero, the games, the links, the contact email. |
+| `index.html` | The page: the hero, the games, the links, the press kits, the contact email. |
 | `styles.css` | All the styling. The colours and fonts are at the top. |
 | `404.html` | The page GitHub Pages shows for a link that doesn't exist. |
 | `CNAME` | The custom domain. Pages reads it; don't delete it. |
@@ -63,6 +63,9 @@ When a game changes (a new update, new screenshots, a new trailer), change
 its page by hand like the rest of the site, and drop the new files into its
 Drive folder too. Partnier/Keymailer links each game's press kit to its page
 here, so keep the addresses as they are.
+
+The home page's Press kits section (`id="press"`, where the nav's Press link
+scrolls) links the hub and each game's kit: add a button there for a new kit.
 
 ## Change the social links
 
