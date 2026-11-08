@@ -33,19 +33,17 @@ then open <http://localhost:8000>.
 ## Change the games
 
 Each game is one `<li class="game">` in `index.html`, in the order they show
-on the page. Copy one to add a game; delete one to drop it. The prototypes
-(Cattitudes) sit in their own smaller list under the released games.
+on the page. Copy one to add a game; delete one to drop it. `styles.css` still
+has the styles for a smaller Prototypes tier under the released games
+(`.prototypes`, `.game--small`) if one comes back.
 
-The game art is linked straight from Steam and itch.io (the `capsule_616x353`
-image on Steam, the cover on itch.io), so it costs the repo nothing. Steam
-gives each new upload a new address, so **when a store page's art changes,
-the old link can stop working**. Either paste in the new address (open the
-store page, right-click the capsule, copy the image address) or, better,
-put the file in `assets/games/` and point the `src` at it.
-
-Cattitudes uses itch.io's small 315x250 cover, because the full one is over
-2 MB. A 630x500 export saved as `assets/games/cattitudes.webp` would look
-sharper.
+The Steam games' art is linked straight from Steam (the `capsule_616x353`
+image), so it costs the repo nothing. Steam gives each new upload a new
+address, so **when a store page's art changes, the old link can stop
+working**. Either paste in the new address (open the store page, right-click
+the capsule, copy the image address) or, better, put the file in
+`assets/games/` and point the `src` at it. Dead Position's card uses the cover
+from its press kit (`press/img/dead-position/dead-position-cover-thumb.webp`).
 
 ## The press kits
 
@@ -80,8 +78,8 @@ community (`<ul class="socials">`) and as the small icons in the footer
 (`<ul class="footer-socials">`). Add, remove or reorder a platform in both,
 and in the `sameAs` list in the page's `<head>`, which tells search engines
 these profiles are the studio's. Each icon is a `<symbol>` at the top of the
-`<body>`, used by its `id` (`#i-bluesky`). Steam and itch.io aren't socials:
-they're the "All our games on" buttons under the games.
+`<body>`, used by its `id` (`#i-bluesky`). Steam isn't a social:
+it's the "Find our games on" button under the games.
 
 ## Assets
 
