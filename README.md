@@ -57,11 +57,17 @@ pages" section), and printing one gives a plain fact sheet.
 
 The images live in `press/img/<game>/`: every image is there at full size
 (screenshots and art as JPG, anything with transparency as PNG) with a
-`-thumb.webp` beside it for the grid. They were made from the art in
-`E:\MyCreations\PressKits`, which is also what's in the public Google Drive
-folders the "Download the whole kit" buttons open (the Foxmoon Studios Drive,
-`Press Kits/`). The Drive kits add what's too big for the repo: the full-size
-key art, GIFs and MP4 clips, and a PDF of each fact sheet.
+`-thumb.webp` beside it for the grid. They were made from the files in the
+public Google Drive folders the "Download the whole kit" buttons open (the
+Foxmoon Studios Drive, `Press Kits/<game>`). The Drive kits add what's too big
+for the repo: the full-size key art, GIFs and MP4 clips, and a PDF of each
+fact sheet.
+
+Dead Position's media are made by the game itself (`art/store/media.py` in
+its repo), and the finished files live in the same Drive under
+`Store Media/Dead Position`. Its kit holds copies of those under kit names,
+and its page here uses the JPG screenshots from `screenshots/jpg/`, the cover
+from `itch/`, and the logo, hero and main capsule from `steam/`.
 
 When a game changes (a new update, new screenshots, a new trailer), change
 its page by hand like the rest of the site, and drop the new files into its
